@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxmodel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <dialog id="dialog">
+        <main>
+            <h2>Dialog!!!</h2>
+            <button id="close-dialog" autofocus>Close</button>
+        </main>    
+    </dialog>
+<div id="content">
+    <h1 translate="yes">Hello</h1>
+    <p translate="no">Hi everyone, Sorry for the trouble. After checking internally, while UI3 is still in beta, users on paid plans as well as users who created their account prior to June 2024 will be able to toggle back to the previous UI. As your account was created after June 2024, you have been automatically set up with UI3. To help you get familiarized with the new design, we recommend checking out our Help Center article, Navigating UI3: Figma’s new UI: Hope this clarifies!</p>
+    <p>Hi everyone, Sorry for the trouble. After checking internally, while UI3 is still in beta, users on paid plans as well as users who created their account prior to June 2024 will be able to toggle back to the previous UI. As your account was created after June 2024, you have been automatically set up with UI3. To help you get familiarized with the new design, we recommend checking out our Help Center article, Navigating UI3: Figma’s new UI: Hope this clarifies!</p><p>Hi everyone, Sorry for the trouble. After checking internally, while UI3 is still in beta, users on paid plans as well as users who created their account prior to June 2024 will be able to toggle back to the previous UI. As your account was created after June 2024, you have been automatically set up with UI3. To help you get familiarized with the new design, we recommend checking out our Help Center article, Navigating UI3: Figma’s new UI: Hope this clarifies!</p>
+</div>
+<script>
+    const dialog = document.getElementById("dialog");
+    const content = document.getElementById("content");
+    const closeBtn = document.getElementById("close-dialog");
+    dialog.showModal();
+    content.setAttribute('inert','');
+    // dialog.close();
+    closeBtn.addEventListener("click", ()=>{
+        dialog.close();
+        content.removeAttribute('inert','');
+        
+        
+    });
+    
+    
+</script>
+</body>
+</html>
